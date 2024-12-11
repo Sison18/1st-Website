@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800&family=VT323&display=swap');
+
+body {      
+    margin: 0;
+    font-family: "Poppins";
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: black;
+}
+
+/* HEADER */
+.navbar {
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(4, 4, 4, 0.802);
+    padding: 10px;
+}
+
+.navbar .header {
+    background: linear-gradient( rgba(9, 10, 10, 0.435), #c39e5d, rgba(23, 22, 22, 0.541));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1px;
+    margin-left: 30px;
+}
+
+.navbar .header #h3l {
+    font-size: 20px;
+    letter-spacing: 5px;
+    margin-left: 10px;
+}
+
+.navbar .header #h3r{
+    margin-left: 20px;
+    letter-spacing: 5px;
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {    
+    list-style: none;
+    margin: 0 20px; /* top bottom & left right */
+    position: relative;
+}
+
+.navbar ul li .asc::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    background: #FBBF24;
+    position: absolute;
+    left: 0;    
+    bottom: -4px;
+    transition: 0.5s;
+}
+
+.navbar ul li .asc:hover::after {
+    width: 65%;
+}
+
+.navbar ul li a{
+    padding-right: 20px;
+    color: aliceblue;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 12px;
+    margin-right: 20px;
+}
+
+.navbar ul li .asc:hover {
+    color: #FBBF24;
+}
+
+.navbar .services {
+    font-size: 14px;
+    border: 1px solid #fbbe2467;
+    color: #fbbe2484;
+    padding-left: 18px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+section {
+    position: absolute;
+    top: 200px;
+    left: 480px;
+    color: #333;
+    width: 50vw;
+    margin: 20px auto;
+    padding: 20px;
+    opacity: 75%;
+    background-color: #e6fcf3;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+.robot5 {
+    position: absolute;
+    top: 300px;
+    left: -30px;
+    opacity: 90%;
+}   
+
+.menu-btn {
+    font-size: 22px;
+    cursor: pointer;
+    color: aliceblue;
+    display: none;
+}
+
+#click {
+    display: none;
+}
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 1150px) {
+    section {
+        width: 45vw;
+        position: absolute;
+        top: 120px;
+        left: 260px;
+    }
+    .navbar ul {
+        position: fixed;
+        top: 80px;
+        left: -580px;
+        height: 100vh;
+        width: 50%;
+        background-color: #424242;
+        display: block;
+        text-align: center;
+        transition: all 0.3s ease-out;
+        z-index: 2;
+    }
+    .navbar ul li {
+        margin: 50px 0;
+    }
+    .navbar ul li a{
+        font-size: 20px;
+    }
+    .navbar .menu-btn {
+        display: block;
+        padding-top: 10px;
+        padding-right: 20px;
+    }
+    #click:checked ~ ul {
+        left: 0%;
+    }
+    #click:checked ~ .menu-btn i:before {
+        content: "\f00d";
+    }
+    .robot5 {
+        display: none;
+    }
+}
