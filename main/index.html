@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Web Weavers</title>
+        <link rel="icon" href="logo.png">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+
+        <!-- HEADER -->
+        <div class="container">
+            <nav>
+                <div class="header">
+                    <h3 id="h3l">Web</h3>
+                    <h3 id="h3r">weavers</h3>
+                </div>
+                <input type="checkbox" id="click">
+                <label for="click" class="menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <ul>
+                    <li><a href="index.html" class="home">HOME</a></li>
+                    <li><a href="/H,A,G,C/about_us.html" class="asc">ABOUT US</a></li>
+                    
+                    <li><a href="/H,A,G,C/services.html" class="asc">SERVICES</a></li>
+                    <li><a href="/H,A,G,C/contact.html" class="asc">CONTACT</a></li>
+                </ul>
+            </nav>
+
+            <!-- SEARCH LIST -->
+            <div id="searchContainer">
+                <input type="text" id="searchInput" placeholder="Search for HTML, CSS, JavaScript">
+                <button id="clearButton" style="display: none; cursor: pointer;" ><i class="fa-solid fa-xmark"></i></button>
+                <ul id="resultList">
+                    <li class="resultItem" data-keywords="HTML" data-link="html.html"><a href="/HCJ_Tuto.html/learn_html.html">HTML - Hypertext Markup Language</a></li>
+                    <li class="resultItem" data-keywords="JavaScript" data-link="javascript.html"><a href="/HCJ_Tuto.html/learn_js.html">JavaScript - Programming Language</a></li>
+                    <li class="resultItem" data-keywords="CSS" data-link="css.html"><a href="/HCJ_Tuto.html/learn_css.html">CSS - Cascading Style Sheets</a></li>
+                    <li class="resultItem" data-keywords="HTML Video Tutorial" data-link="html_video.html"><a href="/HCJ_Tuto.html/v_t_html.html">HTML Video Tutorial</a></li>
+                    <li class="resultItem" data-keywords="CSS Video Tutorial" data-link="css_video.html"><a href="/HCJ_Tuto.html/v_t_css.html">CSS Video Tutorial</a></li>
+                    <li class="resultItem" data-keywords="JavaScript Video Tutorial" data-link="javascript_video.html"><a href="/HCJ_Tuto.html/v_t_js.html">JavaScript Video Tutorial</a></li>
+                </ul>
+            </div>
+
+            <!-- SECTION 1 -->
+            <div id="section1">
+                <h1>Welcome, weavers!</h1> 
+                <h1>Learn  to make <span style="color: #FCD34D;" >Website</span> with us!</h1>
+                <p>Check our tutorials down below👇🏻!</p>
+            </div>
+
+            <!-- SECTION 2 -->
+            <div id="section2">
+                <div class="two_one">
+                    <a class="icon" id="icon2" style="--color: #fed59a">
+                        <img src="html.png" height="50" title="HTML" style="transform: translateY(6px);">
+                    </a>
+                    <h1>HTML</h1>
+                    <p>The language for building web pages</p>
+                    <a href="/HCJ_Tuto.html/learn_html.html" target="_blank"><button id="bb">Learn HTML</button></a> <br>
+                    <a href="/HCJ_Tuto.html/v_t_html.html" target="_blank"><button id="bb">HTML Video Tutorial</button></a>
+                </div >
+                <div class="two_two">
+                    <img src="html example.png" id="image1" height="190">
+                </div>
+            </div>
+
+            <!-- SECTION 3 -->
+            <div id="section3">
+                <div class="three_one">
+                    <a class="icon" id="icon3" style="--color: #2cc8f7">
+                        <img src="css.png" height="35" title="CSS">
+                    </a>
+                    <h1>CSS</h1>
+                    <p>The language for styling web pages</p>
+                    <a href="/HCJ_Tuto.html/learn_css.html" target="_blank"><button id="bb">Learn CSS</button></a> <br>
+                    <a href="/HCJ_Tuto.html/v_t_css.html" target="_blank"><button id="bb">CSS Video Tutorial</button></a>
+                </div>
+                <div class="three_two">
+                    <img src="css example.png" id="image2" height="200">
+                </div>
+            </div>
+            
+
+            <!-- SECTION 4 -->
+            <div id="section4">
+                <div class="four_one">
+                    <a class="icon" id="icon4" style="--color: #FCD34D">
+                        <img src="js.png" height="45" title="JavaScript">
+                    </a>
+                    <h1>JavaScript</h1>
+                    <p>The language for programming web pages</p>
+                    <a href="/HCJ_Tuto.html/learn_js.html" target="_blank"><button id="bb">Learn JavaScript</button></a> <br>
+                    <a href="/HCJ_Tuto.html/v_t_js.html" target="_blank"><button id="bb">JavaScript Video Tutorial</button></a>
+                </div>
+                <div class="four_two">
+                    <img src="js example.png" id="image3" height="200">
+                </div>
+            </div>
+
+            <div class="space"></div>
+
+            <!-- PICTURES -->
+            <div class="robot1">
+                <img src="r1.png" height="600px">
+            </div>
+            <div class="robot2">
+                <img src="r2.png" height="290px">
+            </div>
+            <div class="robot3">
+                <img src="r3.png" height="90px">
+            </div>
+            <div class="robot4">
+                <img src="r4.png" height="250px">
+            </div> 
+            <div class="video">
+                <video src="a.mp4" autoplay muted loop width="700"></video>
+            </div>
+
+            <!-- FOOTER -->
+            <footer>
+                <p>Copy right @ 2023 WebWeabers Tutorials</p> 
+                <p>Terms of Use | Privacy of Policy</p>
+            </footer>
+
+            <!-- JAVASCRIPT -->
+            <script>
+                const searchInput = document.getElementById('searchInput');
+                const resultList = document.getElementById('resultList');
+                const resultItems = document.querySelectorAll('.resultItem');
+                const clearButton = document.getElementById('clearButton');
+        
+                searchInput.addEventListener('input', function () {
+                    const query = searchInput.value.toLowerCase();
+        
+                    // Show or hide results based on the input
+                    resultList.style.display = query ? 'block' : 'none';
+        
+                    resultItems.forEach(item => {
+                        const keywords = item.dataset.keywords.toLowerCase();
+                        const isVisible = keywords.includes(query);
+                        item.style.display = isVisible ? 'block' : 'none';
+                    });
+
+                    // Show or hide the clear button based on the input
+                    clearButton.style.display = query ? 'block' : 'none';
+                });
+        
+                clearButton.addEventListener('click', function () {
+                // Clear the search input and hide the clear button
+                searchInput.value = '';
+                clearButton.style.display = 'none';
+
+                // Show all result items
+                resultItems.forEach(item => {
+                    item.style.display = 'block';
+                });
+            });
+
+            document.body.addEventListener('click', function (event) {
+            // Hide the result list when clicking anywhere on the page
+            if (!event.target.matches('#resultList') && !event.target.matches('#searchInput')) {
+                resultList.style.display = 'none';
+            }
+        });
+
+                resultItems.forEach(item => {
+                    item.addEventListener('click', function () {
+                        const link = item.dataset.link;
+                        window.location.href = link;
+                    });
+                });
+            </script>
+
+        </div>
+    </body>
+</html>
